@@ -1,5 +1,5 @@
 let player = {
-    name: "Per",
+    name: "Cris",
     chips: 200
 }
 
@@ -40,27 +40,27 @@ function startGame() {
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: ";
+    cardsEl.textContent = "Cartas: ";
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " ";
     }
     
-    sumEl.textContent = "Sum: " + sum;
+    sumEl.textContent = "Total: " + sum;
     if (sum <= 20) {
-        message = "Do you want to draw a new card?";
+        message = "Quieres otra carta?";
         messageEl.classList.remove('default');
         messageEl.classList.remove('green');
         messageEl.classList.remove('red');
         messageEl.classList.toggle('yellow');
     } else if (sum === 21) {
-        message = "You've got Blackjack!";
+        message = "Tienes Blackjack!";
         messageEl.classList.remove('default');
         messageEl.classList.remove('green');
         messageEl.classList.remove('yellow');
         messageEl.classList.toggle('green');
         hasBlackJack = true
     } else {
-        message = "You're out of the game!";
+        message = "Estás fuera de juego!";
         messageEl.classList.remove('default');
         messageEl.classList.remove('green');
         messageEl.classList.remove('yellow');
